@@ -14,14 +14,12 @@ public class RentalAppl {
 		//JDBC1 obj = new JDBC1();
 		//obj.createTable("kvdb", "Flats_app");
 		Scanner sc = new Scanner(System.in);
-		//User obj = new User();
 		JDBC1 jdbc = new JDBC1();
 		while(true) {
 			System.out.println("1.Add Flat");
 			System.out.println("2.View Flat");
 			System.out.println("3.Book Flat");
 			System.out.println("4.Delete Flat");
-			//System.out.println("5.User Information");
 			System.out.println("5.Exit");
 			System.out.println("Choose one option");
 			int choice = sc.nextInt();
@@ -71,25 +69,6 @@ public class RentalAppl {
 }
 
 
-class User{
-	private String name;
-	private String email;
-	private int ph_no;
-	private int aadhar_no;
-	private String address;
-	
-	public User(String name,String email,int ph_no,int aadhar_no,String address) {
-		this.name=name;
-		this.email=email;
-		this.ph_no=ph_no;
-		this.aadhar_no=aadhar_no;
-		this.address=address;
-	}//end constructor
-	public void  displayuser() {
-		System.out.println("Users name is "+name+" email is "+email+" and phone number is "+ph_no);
-	}//end display method
-}//end user
-
 class Flat{
 	private int flat_no;
 	private double rent;
@@ -126,14 +105,7 @@ class Flat{
 	public void setisFlatAvailable(boolean isFlatAvailable) {
 		this.isFlatAvailable=isFlatAvailable;
 	}
-	/*public void displayFlat() {
-		if(isFlatAvailable=false) {
-			System.out.println("Flat "+flat_no+" is Available and successfully booked...");
-		}else {
-			System.out.println("Flat "+flat_no+" is already booked");
-		}
-		System.out.println("Flat number "+flat_no+ "at location "+location+" at rent of "+rent+" Available "+isFlatAvailable);
-	}//end displayFlat*/
+	
 }//end flat
 
 class JDBC1{
